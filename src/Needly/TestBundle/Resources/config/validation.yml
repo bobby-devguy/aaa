@@ -1,0 +1,5 @@
+Needly\TestBundle\Entity\GuestBookEntry:
+    properties:
+        name:
+            - Length: 
+                max: 10

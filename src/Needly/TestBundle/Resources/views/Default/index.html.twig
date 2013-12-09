@@ -1,0 +1,33 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Needly Guest Book{% endblock %}
+
+
+{% block body %}
+	
+	<script src="{{ asset('bundles/needly/js/jquery.js') }}"></script>
+	
+	<h2> Guest Book Entries </h2>
+	
+	<style>
+		.title {
+			float: left; padding-left: 50px; font-size: 25px; font-weight: bold;
+		}
+		
+		.entry {
+			float: left; padding-left: 50px; font-size: 20px;
+		}
+	</style>
+	
+    <dl>
+    	<dt style='clear:both; padding-top: 20px; width: 100%;'><div class='title'>Name</div><div class='title'>Email</div><div class='title'>Comment</div><div class='title'>Date</div></dt>
+    {% for entry in entries %}
+        <dt style='clear:both; padding-top: 20px'><div class='entry'>{{ entry.name}}</div><div class='entry'>{{ entry.email}}</div><div class='entry'>{{ entry.comment}}</div><div class='entry'>{{ entry.createdAt|date('Y-m-d')}}</div></dt>
+    {% endfor %}
+	</dl>
+{% endblock %}
+
+
+
+
+

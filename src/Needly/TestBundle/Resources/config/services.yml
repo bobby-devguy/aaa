@@ -1,0 +1,11 @@
+parameters:
+#    needly_test.example.class: Needly\TestBundle\Example
+
+services:
+#    needly_test.example:
+#        class: %needly_test.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+  guest_book:
+    class: Needly\TestBundle\GuestBook
+    arguments: [ @doctrine.orm.entity_manager ]

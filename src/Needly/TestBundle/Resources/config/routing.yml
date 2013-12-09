@@ -1,0 +1,8 @@
+_main:
+    pattern:  /
+    defaults: { _controller: NeedlyTestBundle:Default:show }
+  
+_guestbook:
+    pattern:  /new
+    defaults: { _controller: NeedlyTestBundle:Default:addEntry }
+

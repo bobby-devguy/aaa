@@ -1,0 +1,20 @@
+
+{% block title %}Needly Guest Book{% endblock %}
+
+
+{% block body %}
+	
+	<script src="{{ asset('bundles/needly/js/jquery.js') }}"></script>
+	
+	{% if errorString is defined %}
+		<h1>{{ errorString}}</h1>
+	{% endif %}
+	
+	{{ form(form) }}
+	
+{% endblock %}
+
+
+
+
+

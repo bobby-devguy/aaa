@@ -1,0 +1,27 @@
+Needly\TestBundle\Entity\GuestBookEntry:
+    type: entity
+    table: guestbook
+    repositoryClass: Needly\TestBundle\Entity\GuestBookEntryRepository
+    id:
+        id:
+            type: integer
+            id: true
+            unique: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: '300'
+            nullable: false
+        comment:
+            type: text
+            nullable: true
+        email:
+            type: string
+            length: '300'
+            nullable: true
+        createdAt:
+            type: datetime
+            column: created_at
+    lifecycleCallbacks: {  }

@@ -1,0 +1,4 @@
+needly_test:
+    resource: "@NeedlyTestBundle/Resources/config/routing.yml"
+    prefix:   /
+
